@@ -85,8 +85,8 @@ class SimpleHash{
         str = str.split("").reverse();
         
         for(let i = 0; i < str.length; i++){
-             returnedStr+=generateString(3)
-          returnedStr+=switchHash(str[i])
+             returnedStr+=this.generateString(3)
+          returnedStr+=this.switchHash(str[i])
         }
         
         return returnedStr;
@@ -98,7 +98,7 @@ class SimpleHash{
            for(let i = 0; i < str.length; i++){
           if( (i + 1) % 4 == 0){
             let hashedChar = str.charAt(i);
-            returnedStr += unswitchHash(hashedChar);
+            returnedStr += this.unswitchHash(hashedChar);
           }
         }
         return returnedStr.split("").reverse().join("");
